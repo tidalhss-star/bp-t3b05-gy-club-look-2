@@ -3,220 +3,384 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>가양 클럽 - 양천로 인근 직장인 내돈내산 찐후기 | 010-6279-0862</title>
-    <meta name="description" content="가양역 주변 지식산업센터 직장인들이 직접 다녀오고 작성한 가라오케 및 룸싸롱의 100% 리얼한 솔직 후기 모음. 예약 문의: 010-6279-0862.">
-    <link rel="canonical" href="https://t3b05-gy-club-look-2.pages.dev/about.html">
-    
+    <title>가양 클럽 룩북 - 정보</title>
+    <meta name="description" content="가양 클럽 상세 정보 | 위치, 운영시간, 드레스 코드. 진짜 브로들을 위한 공간. 전화 010-6279-0862. 가양 중심부, 거친 패션의 성지.">
+    <meta name="keywords" content="가양 클럽 정보, 가양 클럽 위치, 가양 클럽 운영시간, 드레스 코드, 스트릿 브루탈리즘, 가양동 클럽, bro 패션">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-raw-concrete">
+    <link rel="canonical" href="https://t3b05-gy-club-look-2.vercel.app/info">
+    <meta property="og:title" content="가양 클럽 룩북 - 정보 | 브로들의 거친 패션">
+    <meta property="og:description" content="가양 클럽 상세 정보. 위치, 운영시간, 드레스 코드. 가짜들은 꺼져라. 진짜 브로만 들어온다.">
+    <meta name="robots" content="index, follow">
     <style>
-        :root {
-            --primary: #1e3d59;
-            --primary-light: #17b978;
-            --bg-dark: #071118;
-            --card-bg: #0f202d;
-            --text-light: #e8f4fd;
-            --text-muted: #8ca3b5;
-            --border: #1a3246;
-            --accent: #ffd60a;
-        }
-        * {
+        /* RESET + base */
+        *, *::before, *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        body {
-            background-color: var(--bg-dark);
-            color: var(--text-light);
-            font-family: 'Pretendard', sans-serif;
-            line-height: 1.7;
-            padding-bottom: 80px;
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            background: #1a1a1a;
         }
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: #f5f0e8;
+            color: #1a1a1a;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        /* typography brutal */
+        h1, h2, h3, h4 {
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+        }
+        h1 {
+            font-size: clamp(2.8rem, 10vw, 6rem);
+            line-height: 0.85;
+            color: #1a1a1a;
+            text-shadow: 4px 4px 0 #d4a373;
+        }
+        h2 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            border-left: 8px solid #d4a373;
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+        p, li, blockquote {
+            font-size: 1.05rem;
+            font-weight: 400;
+            max-width: 65ch;
+        }
+        a {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 700;
+            border-bottom: 2px solid transparent;
+            transition: border 0.2s;
+        }
+        a:hover {
+            border-bottom-color: #d4a373;
+        }
+        img, svg {
+            display: block;
+            max-width: 100%;
+        }
+        /* layout system */
         .container {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 1.5rem;
         }
-        header {
-            background-color: #03080c;
-            border-bottom: 1px solid var(--border);
-            padding: 20px 0;
+        .full-bleed {
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
         }
-        .logo {
-            font-size: 24px;
+        /* buttons - brutal */
+        .btn {
+            display: inline-block;
+            padding: 0.9rem 2.5rem;
+            background: #1a1a1a;
+            color: #f5f0e8;
             font-weight: 800;
-            color: var(--primary-light);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            border: 3px solid #1a1a1a;
+            cursor: pointer;
+            transition: 0.15s;
             text-decoration: none;
         }
-        .nav-links a {
-            color: var(--text-light);
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: 600;
-            font-size: 15px;
+        .btn:hover {
+            background: #f5f0e8;
+            color: #1a1a1a;
+            border-color: #d4a373;
         }
-        .sub-hero {
-            padding: 60px 0;
-            text-align: center;
-            background: linear-gradient(180deg, #0f202d 0%, #071118 100%);
-            border-bottom: 1px solid var(--border);
+        /* nav */
+        nav {
+            background: #1a1a1a;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
-        .sub-hero h1 {
-            font-size: 34px;
-            font-weight: 800;
-            margin-bottom: 15px;
-        }
-        .section {
-            padding: 60px 0;
-            border-bottom: 1px solid var(--border);
-        }
-        .location-info {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 40px;
-        }
-        .location-info h3 {
-            color: var(--primary-light);
-            margin-bottom: 15px;
-            font-size: 20px;
-        }
-        .location-info p {
-            color: var(--text-muted);
-            margin-bottom: 10px;
-            font-size: 15px;
-        }
-        .review-card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 20px;
-        }
-        .review-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 15px;
-            font-size: 14px;
-        }
-        .reviewer {
-            font-weight: 700;
-            color: var(--text-light);
-        }
-        .stars {
-            color: var(--accent);
-            font-weight: 700;
-        }
-        .review-body {
-            color: var(--text-muted);
-            font-size: 15px;
-        }
-        footer {
-            background-color: #03080c;
-            padding: 40px 0;
-            text-align: center;
-            font-size: 14px;
-            color: var(--text-muted);
-            border-top: 1px solid var(--border);
-        }
-        .sticky-bar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: var(--card-bg);
-            border-top: 1px solid var(--primary-light);
-            padding: 15px 20px;
+        nav .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            z-index: 1000;
+            flex-wrap: wrap;
         }
-        .sticky-phone {
-            font-size: 18px;
-            font-weight: 800;
-            color: var(--primary-light);
+        .logo a {
+            font-size: 1.8rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #f5f0e8;
+            border: none;
+            letter-spacing: -0.03em;
         }
-        .sticky-btn {
-            background-color: var(--primary-light);
-            color: #071118;
+        .logo a:hover {
+            color: #d4a373;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: #f5f0e8;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 0.3rem;
+        }
+        .nav-links a:hover,
+        .nav-links a.active {
+            border-bottom-color: #d4a373;
+            color: #d4a373;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+        }
+        .hamburger span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background: #f5f0e8;
+            transition: 0.3s;
+        }
+        /* hero */
+        .hero {
+            padding: 6rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero h1 {
+            margin-bottom: 0.5rem;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #4a4a4a;
+        }
+        /* cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .card {
+            background: #fff;
+            border: 3px solid #1a1a1a;
+            padding: 2rem 1.5rem;
+            box-shadow: 6px 6px 0 #d4a373;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 8px 8px 0 #d4a373;
+        }
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+        .card p {
+            font-size: 0.95rem;
+        }
+        /* faq */
+        .faq-list {
+            margin: 2rem 0 4rem;
+        }
+        .faq-item {
+            border-bottom: 2px solid #1a1a1a;
+            padding: 1.5rem 0;
+        }
+        .faq-item h4 {
+            font-size: 1.15rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-item h4::after {
+            content: '+';
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+        .faq-item p {
+            margin-top: 1rem;
+            max-width: 100%;
+        }
+        /* tel link */
+        .tel-link {
+            display: inline-block;
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: #1a1a1a;
+            border: 3px solid #1a1a1a;
+            padding: 0.6rem 1.8rem;
             text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 6px;
-            font-weight: 800;
+            transition: 0.2s;
+            margin: 1rem 0;
+        }
+        .tel-link:hover {
+            background: #1a1a1a;
+            color: #f5f0e8;
+        }
+        /* info section */
+        .info-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .info-block ul {
+            list-style: none;
+        }
+        .info-block li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+        }
+        .info-block li span {
+            font-weight: 400;
+        }
+        /* footer */
+        footer {
+            background: #1a1a1a;
+            color: #f5f0e8;
+            padding: 2rem 0;
+            margin-top: auto;
+            text-align: center;
+        }
+        footer p {
+            max-width: 100%;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #d4a373;
+            border-bottom: 1px dotted #d4a373;
+        }
+        /* responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                gap: 0;
+                background: #1a1a1a;
+                padding: 1rem 0;
+            }
+            .nav-links.show {
+                display: flex;
+            }
+            .nav-links a {
+                padding: 0.8rem 1.5rem;
+                border-bottom: 1px solid #333;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .info-block {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 3rem;
+            }
+            .tel-link {
+                font-size: 1.3rem;
+                padding: 0.5rem 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="container header-wrap">
-            <a href="index.html" class="logo">GAYANG VELVET</a>
-            <nav class="nav-links">
-                <a href="index.html">홈</a>
-                <a href="about.html">로컬 리포트</a>
-                <a href="blog.html">룩북 가이드</a>
-            </nav>
-        </div>
-    </header>
-
-    <section class="sub-hero">
-        <div class="container">
-            <h1>가양 클럽 진짜 고객 솔직 후기</h1>
-            <p>양천로 지식산업단지 및 가양동 아파트단지 로컬 단골 브로들이 남긴 생생 찐평가</p>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <div class="location-info">
-                <h3>오시는 길 & 지리지표 랜드마크</h3>
-                <p>📍 <strong>위치:</strong> 서울특별시 강서구 양천로 47길 일대 (가양역 7번 출구 도보 3분)</p>
-                <p>9호선 급행열차가 정차하는 가양역 7번 출구 앞 테크노타운 빌딩 뒷편, 지양 상가 교차로 한복판에 안전하게 자리하고 있습니다. 가양대교 남단 교차로나 마포 상암동 상권에서도 차로 단 5분이면 올림픽대로를 타고 넘어올 수 있어, 상암동 방송국 직장인 브로들과 가양동 IT맨들이 퇴근 후 은밀하게 결집하는 가성비 최고의 힐링 명당입니다.</p>
-            </div>
-
-            <h2 style="font-size: 24px; font-weight: 800; margin-bottom: 25px; color: var(--primary-light);">가양 테크노 브로들의 리얼 후기 (3개 엄선)</h2>
-
-            <div class="review-card">
-                <div class="review-header">
-                    <span class="reviewer">임베디드엔지니어_한브로 (30대 남성)</span>
-                    <span class="stars">★★★★★ (5.0)</span>
-                </div>
-                <p class="review-body">“가양역 지식산업센터 입주 기념으로 팀원들 10명 데리고 2차 신나는 곳 가려고 가이드 보고 예약했습니다. 일단 마이크 에코 믹싱 하울링 삑삑거리는 소리가 1도 없이 귀가 쾌적해서 다들 오랜만에 목이 터져라 노래 부르고 스트레스 폭파했습니다. 실장님이 전화로 설명해 준 위스키 세트 가격표랑 막판 빌지에 찍힌 카드 결제 단가가 단 10원도 어긋나지 않는 정직함에 큰 신뢰를 느끼고 단골 등록했습니다.”</p>
-            </div>
-
-            <div class="review-card">
-                <div class="review-header">
-                    <span class="reviewer">상암동PD_오과장 (30대 후반)</span>
-                    <span class="stars">★★★★★ (5.0)</span>
-                </div>
-                <p class="review-body">“중요한 방송 제작 외주 대표님들 모시고 1차 고기집 대접한 뒤 프라이빗한 룸싸롱 코스로 연계해서 들렀습니다. 내부 눅눅한 담배 냄새 전혀 없고 은은한 방향제 향과 딥 벨벳 조명이 아주 격조 높아서 바이어들 모시기에도 면이 바짝 섰습니다. 실장님이 타 팀 동선 안 겹치게 프라이빗 에스코트 지켜 주셔서 2차 자리 대성공하고 중요한 제작 계약 완료했습니다. 강추!”</p>
-            </div>
-
-            <div class="review-card">
-                <div class="review-header">
-                    <span class="reviewer">내돈내산단골러 (20대 후반)</span>
-                    <span class="stars">★★★★☆ (4.5)</span>
-                </div>
-                <p class="review-body">“가벼운 술자리 2차로 친구랑 둘이서 방문했는데 서비스 안주 수제 계절 플레이팅 과일 데코가 정말 대형 강남 호텔 바 수준이어서 탄복했습니다. 실장님 성격 시원시원하시고 약속 가격대로 칼같이 끊어주시는 모습에서 아주 깊은 신뢰를 얻었습니다. 강서/마포 쪽 모임 2차는 무조건 여기 룸으로 선예약 락인입니다.”</p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>서울특별시 강서구 가양동 오피스 상업지구 일대 | 대표 예약문의: 010-6279-0862</p>
-            <p style="margin-top: 10px; font-size: 11px; color: #435a6e;">&copy; 2026 Gayang Velvet. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <div class="sticky-bar">
-        <div class="sticky-text">
-            <span>가양 클럽 룸 실시간 예약</span><br>
-            <span class="sticky-phone">010-6279-0862</span>
-        </div>
-        <a href="tel:010-6279-0862" class="sticky-btn">지금 전화하기</a>
+<nav>
+    <div class="container">
+        <div class="logo"><a href="/">가양클럽룩북</a></div>
+        <button class="hamburger" aria-label="메뉴 열기" onclick="this.nextElementSibling.classList.toggle('show')">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="/">홈</a></li>
+            <li><a href="/lookbook">룩북</a></li>
+            <li><a href="/info" class="active">정보</a></li>
+            <li><a href="/contact">문의</a></li>
+        </ul>
     </div>
+</nav>
 
+<main>
+    <section class="hero">
+        <div class="container">
+            <h1>가양 클럽<br>정보</h1>
+            <p>진짜 브로들을 위한 공간. 가짜들은 꺼져라.</p>
+            <a href="tel:01062790862" class="tel-link">010-6279-0862</a>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>기본 정보</h2>
+        <div class="info-block">
+            <div>
+                <ul>
+                    <li>위치 <span>서울 강서구 가양동 00-00</span></li>
+                    <li>운영 시간 <span>금/토 22:00 ~ 05:00</span></li>
+                    <li>드레스 코드 <span>스트릿 브루탈리즘</span></li>
+                    <li>입장 연령 <span>19세 이상 (신분증 필수)</span></li>
+                    <li>주차 <span>발렛파킹 5,000원</span></li>
+                    <li>연락처 <span><a href="tel:01062790862">010-6279-0862</a></span></li>
+                </ul>
+            </div>
+            <div>
+                <p style="margin-bottom:1rem;"><strong>가양 클럽</strong>은 가양동 중심부에 위치해 있다. 여기는 인스타 감성따위 통하지 않는다. 진짜 거친 패션, 진짜 브로들의 에너지. 니가 가짜면 들어오지 마라.</p>
+                <p>스트릿 브루탈리즘을 입고 와라. 후드티에 조거팬츠, 워커. 거칠수록 환영한다. 깔끔한 셔츠나 정장은 입장 불가. 여기는 클럽이지 호텔 로비가 아니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>왜 가양인가?</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>지역 브로들의 성지</h3>
+                <p>가양은 서울에서 가장 거친 동네 중 하나다. 여기서 자란 브로들은 패션에 가식이 없다. 진짜 삶, 진짜 스트릿. 그게 우리의 DNA다.</p>
+            </div>
+            <div class="card">
+                <h3>룩북의 현장</h3>
+                <p>이 클럽에서 찍힌 모든 룩북은 진짜다. 포토샵 없음, 필터 없음. 거친 조명과 콘크리트 벽이 만들어내는 브루탈리즘. 그게 가양 클럽의 미학이다.</p>
+            </div>
+            <div class="card">
+                <h3>규칙은 간단하다</h3>
+                <p>니가 진짜면 된다. 옷이 비싸냐 싸냐가 중요한 게 아니다. 어떻게 소화하느냐, 얼마나 자신감이 있느냐. 그게 전부다. 가양 클럽은 그런 놈들을 기다린다.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>자주 묻는 질문</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <h4
 </body>
 </html>
