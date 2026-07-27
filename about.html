@@ -1,386 +1,66 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>가양 클럽 룩북 - 정보</title>
-    <meta name="description" content="가양 클럽 상세 정보 | 위치, 운영시간, 드레스 코드. 진짜 브로들을 위한 공간. 전화 010-6279-0862. 가양 중심부, 거친 패션의 성지.">
-    <meta name="keywords" content="가양 클럽 정보, 가양 클럽 위치, 가양 클럽 운영시간, 드레스 코드, 스트릿 브루탈리즘, 가양동 클럽, bro 패션">
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-raw-concrete">
-    <link rel="canonical" href="https://t3b05-gy-club-look-2.vercel.app/info">
-    <meta property="og:title" content="가양 클럽 룩북 - 정보 | 브로들의 거친 패션">
-    <meta property="og:description" content="가양 클럽 상세 정보. 위치, 운영시간, 드레스 코드. 가짜들은 꺼져라. 진짜 브로만 들어온다.">
-    <meta name="robots" content="index, follow">
-    <style>
-        /* RESET + base */
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html {
-            font-size: 16px;
-            scroll-behavior: smooth;
-            background: #1a1a1a;
-        }
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background: #f5f0e8;
-            color: #1a1a1a;
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        /* typography brutal */
-        h1, h2, h3, h4 {
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: -0.02em;
-        }
-        h1 {
-            font-size: clamp(2.8rem, 10vw, 6rem);
-            line-height: 0.85;
-            color: #1a1a1a;
-            text-shadow: 4px 4px 0 #d4a373;
-        }
-        h2 {
-            font-size: clamp(2rem, 6vw, 3.5rem);
-            border-left: 8px solid #d4a373;
-            padding-left: 1rem;
-            margin-bottom: 1.5rem;
-        }
-        h3 {
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
-        }
-        p, li, blockquote {
-            font-size: 1.05rem;
-            font-weight: 400;
-            max-width: 65ch;
-        }
-        a {
-            color: #1a1a1a;
-            text-decoration: none;
-            font-weight: 700;
-            border-bottom: 2px solid transparent;
-            transition: border 0.2s;
-        }
-        a:hover {
-            border-bottom-color: #d4a373;
-        }
-        img, svg {
-            display: block;
-            max-width: 100%;
-        }
-        /* layout system */
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-        .full-bleed {
-            width: 100vw;
-            margin-left: calc(-50vw + 50%);
-        }
-        /* buttons - brutal */
-        .btn {
-            display: inline-block;
-            padding: 0.9rem 2.5rem;
-            background: #1a1a1a;
-            color: #f5f0e8;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            border: 3px solid #1a1a1a;
-            cursor: pointer;
-            transition: 0.15s;
-            text-decoration: none;
-        }
-        .btn:hover {
-            background: #f5f0e8;
-            color: #1a1a1a;
-            border-color: #d4a373;
-        }
-        /* nav */
-        nav {
-            background: #1a1a1a;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        nav .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .logo a {
-            font-size: 1.8rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            color: #f5f0e8;
-            border: none;
-            letter-spacing: -0.03em;
-        }
-        .logo a:hover {
-            color: #d4a373;
-        }
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-        .nav-links a {
-            color: #f5f0e8;
-            font-size: 0.95rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            border-bottom: 2px solid transparent;
-            padding-bottom: 0.3rem;
-        }
-        .nav-links a:hover,
-        .nav-links a.active {
-            border-bottom-color: #d4a373;
-            color: #d4a373;
-        }
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
-            background: none;
-            border: none;
-            padding: 0.5rem;
-        }
-        .hamburger span {
-            display: block;
-            width: 30px;
-            height: 3px;
-            background: #f5f0e8;
-            transition: 0.3s;
-        }
-        /* hero */
-        .hero {
-            padding: 6rem 0 4rem;
-            position: relative;
-            overflow: hidden;
-        }
-        .hero h1 {
-            margin-bottom: 0.5rem;
-        }
-        .hero p {
-            font-size: 1.3rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #4a4a4a;
-        }
-        /* cards */
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        .card {
-            background: #fff;
-            border: 3px solid #1a1a1a;
-            padding: 2rem 1.5rem;
-            box-shadow: 6px 6px 0 #d4a373;
-            transition: transform 0.2s;
-        }
-        .card:hover {
-            transform: translate(-2px, -2px);
-            box-shadow: 8px 8px 0 #d4a373;
-        }
-        .card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.8rem;
-        }
-        .card p {
-            font-size: 0.95rem;
-        }
-        /* faq */
-        .faq-list {
-            margin: 2rem 0 4rem;
-        }
-        .faq-item {
-            border-bottom: 2px solid #1a1a1a;
-            padding: 1.5rem 0;
-        }
-        .faq-item h4 {
-            font-size: 1.15rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .faq-item h4::after {
-            content: '+';
-            font-size: 1.5rem;
-            font-weight: 300;
-        }
-        .faq-item p {
-            margin-top: 1rem;
-            max-width: 100%;
-        }
-        /* tel link */
-        .tel-link {
-            display: inline-block;
-            font-size: 1.6rem;
-            font-weight: 900;
-            color: #1a1a1a;
-            border: 3px solid #1a1a1a;
-            padding: 0.6rem 1.8rem;
-            text-decoration: none;
-            transition: 0.2s;
-            margin: 1rem 0;
-        }
-        .tel-link:hover {
-            background: #1a1a1a;
-            color: #f5f0e8;
-        }
-        /* info section */
-        .info-block {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        .info-block ul {
-            list-style: none;
-        }
-        .info-block li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #ccc;
-            display: flex;
-            justify-content: space-between;
-            font-weight: 600;
-        }
-        .info-block li span {
-            font-weight: 400;
-        }
-        /* footer */
-        footer {
-            background: #1a1a1a;
-            color: #f5f0e8;
-            padding: 2rem 0;
-            margin-top: auto;
-            text-align: center;
-        }
-        footer p {
-            max-width: 100%;
-            font-size: 0.9rem;
-        }
-        footer a {
-            color: #d4a373;
-            border-bottom: 1px dotted #d4a373;
-        }
-        /* responsive */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                gap: 0;
-                background: #1a1a1a;
-                padding: 1rem 0;
-            }
-            .nav-links.show {
-                display: flex;
-            }
-            .nav-links a {
-                padding: 0.8rem 1.5rem;
-                border-bottom: 1px solid #333;
-            }
-            .hamburger {
-                display: flex;
-            }
-            .info-block {
-                grid-template-columns: 1fr;
-            }
-            .hero h1 {
-                font-size: 3rem;
-            }
-            .tel-link {
-                font-size: 1.3rem;
-                padding: 0.5rem 1.2rem;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<title>가양 클럽 룩북 — 정보</title>
+<meta name="description" content="가양 지역 클럽을 방문하기 전, 언제 무엇을 정해야 하는지, 당일에 결정 가능한 사항, 시간대별 선택지를 데이터 기반으로 안내합니다. 정확한 기준과 체크리스트를 통해 효율적인 클럽 라이프를 설계하세요.">
+<meta name="keywords" content="가양 클럽, 클럽 룩북, 가양 클럽 선택, 클럽 방문 가이드, 가양 나이트클럽, 클럽 일정 계획">
+<link rel="canonical" href="https://gayang-club-guide.program-school.online/about.html">
+<meta property="og:title" content="가양 클럽 룩북 — 시점에 따라 달라지는 선택 가이드">
+<meta property="og:description" content="가양 클럽 방문 전, 언제 무엇을 정해야 하는지와 시간대별 선택지를 데이터 기반으로 안내합니다.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gayang-club-guide.program-school.online/about.html">
+<meta property="og:image" content="">
 </head>
 <body>
+<header class="v-hero-hwr7">
+  <nav class="nav-present">
+    <ul>
+      <li><a href="/intro">소개</a></li>
+      <li><a href="/guide">가이드</a></li>
+      <li><a href="/info">정보</a></li>
+      <li><a href="/contact">연락처</a></li>
+    </ul>
+  </nav>
+  <h1>가양 클럽 룩북 — 정보</h1>
+</header>
 
-<nav>
-    <div class="container">
-        <div class="logo"><a href="/">가양클럽룩북</a></div>
-        <button class="hamburger" aria-label="메뉴 열기" onclick="this.nextElementSibling.classList.toggle('show')">
-            <span></span><span></span><span></span>
-        </button>
-        <ul class="nav-links">
-            <li><a href="/">홈</a></li>
-            <li><a href="/lookbook">룩북</a></li>
-            <li><a href="/info" class="active">정보</a></li>
-            <li><a href="/contact">문의</a></li>
-        </ul>
-    </div>
-</nav>
+<main class="n-img-m6m0">
+  <section id="selection-criteria">
+    <h2>클럽 선택 시 핵심 체크리스트</h2>
+    <p>가양 지역은 다양한 테마와 음악 스타일을 가진 클럽이 밀집해 있습니다. 첫 번째 단계는 방문 목적을 명확히 하는 것입니다. 친구와 자유롭게 즐기고 싶은 경우, 대형 무대와 조명 효과가 강조된 클럽을 선택하고, 음악 감상과 분위기 중심이라면 소규모 라운지형 클럽을 우선 고려합니다.</p>
+    <p>다음으로는 교통 접근성을 평가합니다. 지하철 3호선 가양역 인근 클럽은 이동이 편리하며, 주차 공간이 충분한 클럽은 차량 이용자에게 유리합니다. 또한, 클럽의 영업 시간과 입장 제한 인원도 사전에 확인해 두어 예기치 않은 입장 거절을 방지할 수 있습니다.</p>
+  </section>
 
-<main>
-    <section class="hero">
-        <div class="container">
-            <h1>가양 클럽<br>정보</h1>
-            <p>진짜 브로들을 위한 공간. 가짜들은 꺼져라.</p>
-            <a href="tel:01062790862" class="tel-link">010-6279-0862</a>
-        </div>
-    </section>
+  <section id="time-based-atmosphere">
+    <h2>시간대별 분위기와 추천 플랜</h2>
+    <p>초반(20:00~22:00)에는 입장 초반 손님이 비교적 적어 입장 대기 시간이 짧고, DJ가 아직 본격적인 세트를 시작하지 않아 음악 선택 폭이 넓습니다. 이때는 음료 할인 프로모션을 활용해 비용을 절감하고, 클럽 내부를 탐색하며 분위기에 익숙해지는 것이 좋습니다.</p>
+    <p>중반(22:00~00:00)에는 무대 조명이 최고조에 이르고, 인기 DJ의 라인업이 시작됩니다. 이 시간대는 무대 퍼포먼스와 대형 댄스 플로어를 즐기기에 최적이며, 미리 예약된 테이블이나 라운지 좌석이 있다면 보다 편안하게 관람할 수 있습니다.</p>
+    <p>심야(00:00~02:00)에는 클럽이 최대 혼잡을 맞이하며, 에너지 레벨이 최고조에 달합니다. 이때는 몸의 컨디션을 고려해 충분한 수분 섭취와 적절한 휴식 스케줄을 계획해야 합니다. 또한, 안전을 위해 클럽 내부 보안 정책과 비상 탈출구 위치를 확인해 두는 것이 바람직합니다.</p>
+  </section>
 
-    <section class="container">
-        <h2>기본 정보</h2>
-        <div class="info-block">
-            <div>
-                <ul>
-                    <li>위치 <span>서울 강서구 가양동 00-00</span></li>
-                    <li>운영 시간 <span>금/토 22:00 ~ 05:00</span></li>
-                    <li>드레스 코드 <span>스트릿 브루탈리즘</span></li>
-                    <li>입장 연령 <span>19세 이상 (신분증 필수)</span></li>
-                    <li>주차 <span>발렛파킹 5,000원</span></li>
-                    <li>연락처 <span><a href="tel:01062790862">010-6279-0862</a></span></li>
-                </ul>
-            </div>
-            <div>
-                <p style="margin-bottom:1rem;"><strong>가양 클럽</strong>은 가양동 중심부에 위치해 있다. 여기는 인스타 감성따위 통하지 않는다. 진짜 거친 패션, 진짜 브로들의 에너지. 니가 가짜면 들어오지 마라.</p>
-                <p>스트릿 브루탈리즘을 입고 와라. 후드티에 조거팬츠, 워커. 거칠수록 환영한다. 깔끔한 셔츠나 정장은 입장 불가. 여기는 클럽이지 호텔 로비가 아니다.</p>
-            </div>
-        </div>
-    </section>
+  <section id="group-size-planning">
+    <h2>인원수별 맞춤 플랜</h2>
+    <p>소규모(2~4명) 그룹은 라운지형 클럽이나 VIP룸을 활용해 프라이버시를 유지하면서 고급 음료와 맞춤 서비스를 즐길 수 있습니다. 사전 예약 시 최소 인원 제한이 있을 수 있으니, 예약 전 인원 수와 예약 가능 시간을 확인하세요.</p>
+    <p>중규모(5~10명) 그룹은 일반 플로어와 라운지 구역을 병행하는 것이 효율적입니다. 대형 테이블 예약을 통해 동시에 여러 사람과 대화를 유지하면서 댄스 플로어에서도 자유롭게 움직일 수 있습니다. 이때는 사전에 입장료 할인 패키지를 검토해 비용 절감을 도모하십시오.</p>
+    <p>대규모(10명 이상) 그룹은 클럽 측과 별도 이벤트 협의를 진행하는 것이 이상적입니다. 전용 파티룸, 음향 설비, 전용 바 서비스 등을 사전 계약하면 현장에서 원활한 진행이 보장됩니다. 대규모 그룹은 사전 계약 시 최소 48시간 전 통보가 필요합니다.</p>
+  </section>
 
-    <section class="container">
-        <h2>왜 가양인가?</h2>
-        <div class="card-grid">
-            <div class="card">
-                <h3>지역 브로들의 성지</h3>
-                <p>가양은 서울에서 가장 거친 동네 중 하나다. 여기서 자란 브로들은 패션에 가식이 없다. 진짜 삶, 진짜 스트릿. 그게 우리의 DNA다.</p>
-            </div>
-            <div class="card">
-                <h3>룩북의 현장</h3>
-                <p>이 클럽에서 찍힌 모든 룩북은 진짜다. 포토샵 없음, 필터 없음. 거친 조명과 콘크리트 벽이 만들어내는 브루탈리즘. 그게 가양 클럽의 미학이다.</p>
-            </div>
-            <div class="card">
-                <h3>규칙은 간단하다</h3>
-                <p>니가 진짜면 된다. 옷이 비싸냐 싸냐가 중요한 게 아니다. 어떻게 소화하느냐, 얼마나 자신감이 있느냐. 그게 전부다. 가양 클럽은 그런 놈들을 기다린다.</p>
-            </div>
-        </div>
-    </section>
+  <section id="faq">
+    <h2>자주 묻는 질문</h2>
+    <h3>Q1. 클럽 입장 전 반드시 체크해야 할 항목은?</h3>
+    <p>입장 가능 연령, 신분증 소지 여부, 드레스 코드, 입장료 및 음료 가격대를 사전에 확인하십시오. 특히, 특정 클럽은 특정 복장을 요구하거나 예약이 필수인 경우가 있어 사전 확인이 필수입니다.</p>
+    <h3>Q2. 늦은 시간에 도착하면 입장이 제한될 수 있나요?</h3>
+    <p>대부분의 클럽은 정해진 마감 시간이 존재합니다. 특히, 02:00 이후에는 보안 검사가 강화되고 입장이 제한될 수 있습니다. 늦은 시간에 방문 계획이 있다면, 사전에 클럽에 연락해 입장 가능 여부를 확인하는 것이 안전합니다.</p>
+    <h3>Q3. 주류 판매가 제한된 시간대는 언제인가요?</h3>
+    <p>일부 클럽은 주류 판매를 01:00까지 제한하고, 그 이후에는 무알콜 음료와 스낵만 제공합니다. 주류를 중심으로 한 파티를 계획한다면, 판매 종료 시간을 미리 파악하고 음료 구매 시점을 조정하세요.</p>
+    <h3>Q4. 대중교통을 이용할 경우 가장 효율적인 경로는?</h3>
+    <p>가양역 3번 출구를 기준으로 도보 5분 이내에 위치한 클럽이 가장 많은 편입니다. 지하철 이용 시 3호선 가양역을 내린 뒤 2번 출구로 이동하면 주요 클럽으로 향하는 버스와 셔틀이 바로 연결됩니다. 차량 이용자는 주변 주차장을 사전에 예약하는 것이 권장됩니다.</p>
+  </section>
+</main>
 
-    <section class="container">
-        <h2>자주 묻는 질문</h2>
-        <div class="faq-list">
-            <div class="faq-item">
-                <h4
+<footer class="v-hero-hwr7">
+  <p>&copy; 2026 가양 클럽 가이드. All rights reserved.</p>
+</footer>
 </body>
 </html>
